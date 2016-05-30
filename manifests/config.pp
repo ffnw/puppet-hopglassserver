@@ -1,5 +1,11 @@
 class hopglassserver::config inherits hopglassserver {
 
+  file { '/etc/hopglass-server/':
+    ensure => directory,
+    owner  => 'root',
+    group  => 'root',
+    mode   => '0750',
+  } ->
   file { '/etc/hopglass-server/puppet/':
     ensure => directory,
     owner  => 'root',
