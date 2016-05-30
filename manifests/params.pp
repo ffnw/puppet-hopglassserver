@@ -5,6 +5,7 @@ class hopglassserver::params {
   $interval_statistics = 60
   $interval_nodeinfo   = 300
 
+  $storage_interval = 300
   $storage_file = './storage.json'
 
   $purge_maxAge   = 14

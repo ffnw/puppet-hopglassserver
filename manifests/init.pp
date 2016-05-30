@@ -2,6 +2,7 @@ class hopglassserver (
   Integer               $announced_port              = $hopglassserver::params::announced_port,
   Integer               $interval_statistics         = $hopglassserver::params::interval_statistics,
   Integer               $interval_nodeinfo           = $hopglassserver::params::interval_nodeinfo,
+  Integer               $storage_interval            = $hopglassserver::params::storage_interval,
   String                $storage_file                = $hopglassserver::params::storage_file,
   Integer               $purge_maxAge                = $hopglassserver::params::purge_maxAge,
   Integer               $purge_interval              = $hopglassserver::params::purge_interval,
