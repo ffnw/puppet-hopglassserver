@@ -1,0 +1,30 @@
+<%- | $announced_port,
+      $interval_statistics,
+      $interval_nodeinfo,
+| -%>
+{
+  "core": { },
+  "receiver": {
+    "receivers": [
+      { "module": "announced",
+        "config": {
+          "target": {
+            "ip": "ff02::1",
+            "port": 1001
+          },
+          "port": <%= $announced_port %>,
+          "interval": {
+            "statistics": <%= $interval_statistics %>,
+            "nodeinfo": <%= $interval_nodeinfo %>
+          }
+        },
+        "overlay": false
+      },
+      { "module": "aliases",
+        "config": {
+          "file": "./aliases.json"
+        },
+        "overlay": true
+      }
+    ],
+    "ifaces": [

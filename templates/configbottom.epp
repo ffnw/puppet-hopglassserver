@@ -1,0 +1,30 @@
+<%- | $storage_interval,
+      $storage_file,
+      $purge_maxAge,
+      $purge_interval,
+      $provider_offlineTime,
+      $provider_metricsOfflineTime,
+      $provider_ffapiPath,
+      $webserver_ip,
+      $webserver_port,
+| -%>
+    ],
+    "storage": {
+      "interval": <%= $interval_storage %>,
+      "file": "<%= $storage_file %>"
+    },
+    "purge": {
+      "maxAge": <%= $purge_maxAge %>,
+      "interval": <%= $purge_interval %>
+    }
+  },
+  "provider": {
+    "offlineTime": <%= $provider_offlineTime %>,
+    "metricsOfflineTime": <%= $provider_metricsOfflineTime %>,
+    "ffapiPath": "<%= $provider_ffapiPath %>"
+  },
+  "webserver": {
+    "ip": "<%= $webserver_ip %>",
+    "port": <%= $webserver_port %>
+  }
+}
