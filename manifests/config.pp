@@ -2,19 +2,21 @@ class hopglassserver::config inherits hopglassserver {
 
   file { '/etc/hopglass-server/':
     ensure => directory,
-    owner  => 'root',
-    group  => 'root',
+    owner  => 'hopglass',
+    group  => 'hopglass',
     mode   => '0750',
   } ->
   file { '/etc/hopglass-server/puppet/':
     ensure => directory,
-    owner  => 'root',
-    group  => 'root',
+    owner  => 'hopglass',
+    group  => 'hopglass',
     mode   => '0750',
   } ->
   concat { '/etc/hopglass-server/puppet/config.json':
     ensure         => present,
     ensure_newline => true,
+    owner          => 'hopglass',
+    group          => 'hopglass',
   }
 
   concat::fragment { 'hopglassserver-configtop':
