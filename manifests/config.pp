@@ -4,7 +4,7 @@ class hopglassserver::config inherits hopglassserver {
     ensure => directory,
     owner  => 'root',
     group  => 'root',
-    chmod  => '0750',
+    mode   => '0750',
   } ->
   concat { '/etc/hopglass-server/puppet/config.json':
     ensure         => present,
