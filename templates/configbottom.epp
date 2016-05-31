@@ -10,7 +10,7 @@
 | -%>
     ],
     "storage": {
-      "interval": <%= $interval_storage %>,
+      "interval": <%= $storage_interval %>,
       "file": "<%= $storage_file %>"
     },
     "purge": {
