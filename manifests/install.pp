@@ -16,7 +16,7 @@ class hopglassserver::install inherits hopglassserver {
     revision => 'master',
   } ~>
   exec { 'bootstrap hopglass-server':
-    cwd     => '/opt/hopglass-server',
+    cwd     => '/opt/hopglass-server/scripts',
     command => 'bash bootstrap.sh',
     path    => [ '/bin/','/sbin/','/usr/bin/','/usr/sbin/' ],
   }
