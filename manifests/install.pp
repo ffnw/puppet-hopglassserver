@@ -39,11 +39,10 @@ class hopglassserver::install inherits hopglassserver {
     command     => 'npm install',
     path        => [ '/bin/','/sbin/','/usr/bin/','/usr/sbin/' ],
     refreshonly => true,
-  }
-
+  } ->
   file { '/lib/systemd/system/hopglass-server@.service':
-    ensure => link,
-    target => '/opt/hopglass/server/hopglass-server@.service'
+    ensure => present,
+    source => '/opt/hopglass/server/hopglass-server@.service'
   }
 
 }
