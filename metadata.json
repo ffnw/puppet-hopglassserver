@@ -9,7 +9,8 @@
   "issues_url": "https://github.com/ffnw/puppet-hopglassserver/issues",
   "dependencies": [
     {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"},
-    {"name":"puppetlabs-concat","version_requirement":">= 2.1.0"}
+    {"name":"puppetlabs-concat","version_requirement":">= 2.1.0"},
+    {"name":"puppetlabs-vcsrepo","version_requirement":">= 1.4.0"}
   ],
   "data_provider": null
 }
