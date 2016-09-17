@@ -19,6 +19,12 @@ class hopglassserver::install inherits hopglassserver {
     home   => '/opt/hopglass',
     gid    => 'hopglass'
   } ->
+  file { '/opt/hopglass':
+    ensure => directory,
+    owner  => 'hopglass',
+    group  => 'hopglass',
+    mode   => '0755'
+  } ->
   vcsrepo { '/opt/hopglass/server':
     ensure   => latest,
     owner    => 'hopglass',
