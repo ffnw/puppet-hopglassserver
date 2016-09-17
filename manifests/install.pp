@@ -13,7 +13,7 @@ class hopglassserver::install inherits hopglassserver {
     system => true,
     shell  => '/bin/false',
     home   => '/opt/hopglass',
-    group  => "${title}"
+    gid    => "${title}"
   } ->
   vcsrepo { '/opt/hopglass/server':
     ensure   => latest,
