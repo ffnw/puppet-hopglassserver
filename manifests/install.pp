@@ -8,6 +8,10 @@ class hopglassserver::install inherits hopglassserver {
     }
   }
 
+  group { 'hopglass':
+    ensure => present,
+    system => true
+  } ->
   user { 'hopglass':
     ensure => present,
     system => true,
