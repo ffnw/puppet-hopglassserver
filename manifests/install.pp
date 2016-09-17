@@ -35,5 +35,10 @@ class hopglassserver::install inherits hopglassserver {
     refreshonly => true,
   }
 
+  file { '/lib/systemd/system/hopglass-server@.service':
+    ensure => link,
+    target => '/opt/hopglass/server/hopglass-server@.service'
+  }
+
 }
 
