@@ -1,5 +1,18 @@
 class hopglassserver::install inherits hopglassserver {
 
+  apt::source { 'nodesource':
+    location => 'https://deb.nodesource.com/node_6.x',
+    repos    => 'main',
+    include  => {
+      'deb' => true,
+      'src' => true,
+    },
+    key      => {
+      'id'     => '9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280',
+      'server' => 'pgp.mit.edu',
+    },
+  }
+
   ["nodejs","git"].each | $value | {
     if(!defined(Package[$value])) {
       package { $value:
